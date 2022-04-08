@@ -1,11 +1,9 @@
 package main
 
-
-type  Node [T any] struct {
+type Node[T any] struct {
 	value T
 	next  *Node[T]
 }
-
 type Graph[T any] struct {
 	head *Node[T]
 }
@@ -89,7 +87,6 @@ func main() {
 	employees := []string{"Bill", "Wes", "Steve", "James", "Zach", "Ryan", "Sam", "Joe", "Scott", "Eric"}
 	for _, employee := range employees {
 		g.add(employee)
-
 	}
 	g.print()
 	g.bfs("Eric")
